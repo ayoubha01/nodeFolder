@@ -1,14 +1,14 @@
 import express from "express";
-import superheroes from "superheroes";
+import {randomSuperhero} from 'superheroes';
 
 const app=express();
 const port=3000;
 
+
 app.get("/",(req, res) => {
-    const heroName=superheroes();
+    const heroName=randomSuperhero();
     res.send("hello i'm ayoub and My superHeroe is "+heroName);
 })
-app.listen(3000,() => {
-    if (err) throw err ;
+app.listen(port, ( )=>{
     console.log("server running on port "+port);
 })
